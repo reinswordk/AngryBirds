@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     {
         GameOver.SetActive(false);
         Win.SetActive(false);
+
         for(int i = 0; i < Birds.Count; i++)
         {
             Birds[i].OnBirdDestroyed += ChangeBird;
@@ -47,7 +48,7 @@ public class GameController : MonoBehaviour
         if(Birds.Count > 0)
         {   SlingShooter.InitiateBird(Birds[0]);
             _shotBird = Birds[0];
-        }else
+        }else if(Birds.Count == 0 && Enemies.Count > 0 )
         {
             GameOver.SetActive(true);
             _isGameEnded = true;

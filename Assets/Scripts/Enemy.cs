@@ -40,5 +40,9 @@ public class Enemy : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        else if(col.gameObject.tag == "Border")
+        {
+            Destroy(gameObject);
+        }
     }
 }

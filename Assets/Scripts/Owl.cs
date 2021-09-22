@@ -4,29 +4,24 @@ using UnityEngine;
 
 public class Owl : Bird
 {
+    public int a = 2;
+    public GameObject explotionPredab;
 
-    [SerializeField]
-    public float fieldOfImpact = 0.4f;
-    public float force = 0.6f;
-
-    public LayerMask LayerToHit;
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "Obstacle")
         {
-            Explode();
-            //Destroy(other.gameObject);
+            if(a == 2)
+            {
+                Instantiate(explotionPredab, transform.position, transform.rotation);
+                Destroy(other.gameObject);
+                a-= 2;
+            }else
+            {
+                return;
+            }
             
         }
     }
 
-    void Explode()
-    {
-        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, LayerToHit);
-        foreach(Collider2D obj in objects)
-        {
-            Vector2 direction = obj.transform.position - transform.position;;
-            obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
-        }
-    }
 }

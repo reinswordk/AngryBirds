@@ -1420,11 +1420,9 @@ MonoBehaviour:
   Parent: {fileID: 0}
   RigidBody: {fileID: 996444773}
   Collider: {fileID: 996444772}
-  fieldOfImpact: 5
-  force: 20
-  LayerToHit:
-    serializedVersion: 2
-    m_Bits: 256
+  a: 2
+  explotionPredab: {fileID: 8599513371631537896, guid: 785009b08971211469d910ed5a296512,
+    type: 3}
 --- !u!1 &1052648023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,6 +1837,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 4431414379036167773, guid: 3f60551be8ec56543829c00b8301f99b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431414378756052300, guid: 3f60551be8ec56543829c00b8301f99b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431414379632129311, guid: 3f60551be8ec56543829c00b8301f99b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4431414380145585830, guid: 3f60551be8ec56543829c00b8301f99b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1900,21 +1913,6 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4431414378566978385, guid: 3f60551be8ec56543829c00b8301f99b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431414378756052300, guid: 3f60551be8ec56543829c00b8301f99b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431414379036167773, guid: 3f60551be8ec56543829c00b8301f99b,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431414379632129311, guid: 3f60551be8ec56543829c00b8301f99b,
         type: 3}
       propertyPath: m_Layer
       value: 8
